@@ -1,0 +1,8 @@
+0:00 Intro
+0:13 What is a stock? (IPO)
+0:37 Exchange, broker & regulator
+0:57 Order book: bid, ask & spread
+1:28 Matching engine & price
+1:51 Clearing & T+1 settlement
+2:06 Why prices move & indexes
+2:24 Recap
