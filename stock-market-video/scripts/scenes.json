@@ -1,0 +1,18 @@
+[
+ {"id":"hook","chapter":"Intro","phrases":[
+  ["Every trading day,"],["billions of shares change hands."],["But what actually happens"],["in the split second after you tap \"Buy\"?"],["Let's follow one order, step by step,"],["and see how the stock market really works."]]},
+ {"id":"stock","chapter":"What is a stock? (IPO)","phrases":[
+  ["First, what is a stock?"],["It's a tiny slice of ownership in a company."],["When a company wants money to grow,"],["it can split itself into millions of shares,"],["and sell some of them to the public."],["That first sale is called an IPO,"],["an initial public offering,"],["and the cash goes to the company."],["After that, investors trade those shares with each other."],["That's the stock market."]]},
+ {"id":"players","chapter":"Exchange, broker & regulator","phrases":[
+  ["Trading happens on an exchange,"],["like the New York Stock Exchange, Nasdaq, or India's NSE."],["You can't trade there directly."],["Your order goes through a broker,"],["the app or firm licensed to reach the exchange."],["And a regulator,"],["like the SEC in the US, or SEBI in India,"],["polices the rules."]]},
+ {"id":"orderbook","chapter":"Order book: bid, ask & spread","phrases":[
+  ["Now, your order."],["Every stock has an order book."],["On one side, buyers,"],["and the highest price they'll pay: the bid."],["On the other, sellers,"],["and the lowest price they'll accept: the ask."],["Say the best bid is $99,","Say the best bid is ninety-nine dollars,"],["and the best ask is $100.","and the best ask is one hundred."],["That $1 gap is called the spread.","That one-dollar gap is called the spread."],["A market order buys right away, at the best ask."],["A limit order at $99 joins the queue,","A limit order at ninety-nine joins the queue,"],["and waits for a seller to come down to it."]]},
+ {"id":"matching","chapter":"Matching engine & price","phrases":[
+  ["The exchange's matching engine"],["pairs buyers and sellers in microseconds:"],["best price first,"],["then first come, first served."],["And here's the key."],["The price you see is simply the last trade."],["When buyers outnumber sellers,"],["they keep paying the ask, and the price climbs."],["When sellers rush out,"],["they hit the bids, and it falls."],["That's supply and demand, tick by tick."]]},
+ {"id":"settle","chapter":"Clearing & T+1 settlement","phrases":[
+  ["Once matched, a clearing house steps into the middle"],["and guarantees the trade,"],["so neither side can back out."],["One business day later, called T+1,","One business day later, called T plus one,"],["the cash and the shares actually swap,"],["and the stock lands in your account."]]},
+ {"id":"index","chapter":"Why prices move & indexes","phrases":[
+  ["Day to day, prices swing on news and emotion."],["Over years, they tend to follow"],["what companies actually earn."],["And when you hear \"the market is up\","],["that usually means an index,"],["like the S&P 500, or the Nifty 50,"],["which tracks a basket of large companies at once."]]},
+ {"id":"recap","chapter":"Recap","phrases":[
+  ["So, to recap."],["A company issues shares."],["Your broker sends your order to the exchange."],["The order book matches it with a seller."],["The clearing house guarantees it."],["And settlement delivers it."],["That's how the stock market works."],["If this made it click, subscribe for the next breakdown."],["This video is for education, not financial advice."]]}
+]

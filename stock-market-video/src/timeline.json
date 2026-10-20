@@ -1,0 +1,447 @@
+{
+ "fps": 30,
+ "total": 5011,
+ "scenes": [
+  {
+   "id": "hook",
+   "chapter": "Intro",
+   "audio": "vo/s1.mp3",
+   "audioFrom": 8,
+   "from": 0,
+   "frames": 409,
+   "phrases": [
+    {
+     "text": "Every trading day,",
+     "start": 8,
+     "end": 49
+    },
+    {
+     "text": "billions of shares change hands.",
+     "start": 49,
+     "end": 121
+    },
+    {
+     "text": "But what actually happens",
+     "start": 121,
+     "end": 172
+    },
+    {
+     "text": "in the split second after you tap \"Buy\"?",
+     "start": 172,
+     "end": 251
+    },
+    {
+     "text": "Let's follow one order, step by step,",
+     "start": 251,
+     "end": 299
+    },
+    {
+     "text": "and see how the stock market really works.",
+     "start": 299,
+     "end": 387
+    }
+   ],
+   "snapped": 5,
+   "needed": 5
+  },
+  {
+   "id": "stock",
+   "chapter": "What is a stock? (IPO)",
+   "audio": "vo/s2.mp3",
+   "audioFrom": 8,
+   "from": 409,
+   "frames": 720,
+   "phrases": [
+    {
+     "text": "First, what is a stock?",
+     "start": 11,
+     "end": 81
+    },
+    {
+     "text": "It's a tiny slice of ownership in a company.",
+     "start": 81,
+     "end": 172
+    },
+    {
+     "text": "When a company wants money to grow,",
+     "start": 172,
+     "end": 208
+    },
+    {
+     "text": "it can split itself into millions of shares,",
+     "start": 208,
+     "end": 301
+    },
+    {
+     "text": "and sell some of them to the public.",
+     "start": 301,
+     "end": 366
+    },
+    {
+     "text": "That first sale is called an IPO,",
+     "start": 366,
+     "end": 444
+    },
+    {
+     "text": "an initial public offering,",
+     "start": 444,
+     "end": 479
+    },
+    {
+     "text": "and the cash goes to the company.",
+     "start": 479,
+     "end": 560
+    },
+    {
+     "text": "After that, investors trade those shares with each other.",
+     "start": 560,
+     "end": 665
+    },
+    {
+     "text": "That's the stock market.",
+     "start": 665,
+     "end": 703
+    }
+   ],
+   "snapped": 9,
+   "needed": 9
+  },
+  {
+   "id": "players",
+   "chapter": "Exchange, broker & regulator",
+   "audio": "vo/s3.mp3",
+   "audioFrom": 8,
+   "from": 1129,
+   "frames": 607,
+   "phrases": [
+    {
+     "text": "Trading happens on an exchange,",
+     "start": 8,
+     "end": 71
+    },
+    {
+     "text": "like the New York Stock Exchange, Nasdaq, or India's NSE.",
+     "start": 71,
+     "end": 208
+    },
+    {
+     "text": "You can't trade there directly.",
+     "start": 208,
+     "end": 267
+    },
+    {
+     "text": "Your order goes through a broker,",
+     "start": 267,
+     "end": 321
+    },
+    {
+     "text": "the app or firm licensed to reach the exchange.",
+     "start": 321,
+     "end": 418
+    },
+    {
+     "text": "And a regulator,",
+     "start": 418,
+     "end": 452
+    },
+    {
+     "text": "like the SEC in the US, or SEBI in India,",
+     "start": 452,
+     "end": 551
+    },
+    {
+     "text": "polices the rules.",
+     "start": 551,
+     "end": 583
+    }
+   ],
+   "snapped": 7,
+   "needed": 7
+  },
+  {
+   "id": "orderbook",
+   "chapter": "Order book: bid, ask & spread",
+   "audio": "vo/s4.mp3",
+   "audioFrom": 8,
+   "from": 1736,
+   "frames": 912,
+   "phrases": [
+    {
+     "text": "Now, your order.",
+     "start": 8,
+     "end": 65
+    },
+    {
+     "text": "Every stock has an order book.",
+     "start": 65,
+     "end": 108
+    },
+    {
+     "text": "On one side, buyers,",
+     "start": 108,
+     "end": 162
+    },
+    {
+     "text": "and the highest price they'll pay: the bid.",
+     "start": 162,
+     "end": 244
+    },
+    {
+     "text": "On the other, sellers,",
+     "start": 244,
+     "end": 295
+    },
+    {
+     "text": "and the lowest price they'll accept: the ask.",
+     "start": 295,
+     "end": 378
+    },
+    {
+     "text": "Say the best bid is $99,",
+     "start": 378,
+     "end": 490
+    },
+    {
+     "text": "and the best ask is $100.",
+     "start": 490,
+     "end": 558
+    },
+    {
+     "text": "That $1 gap is called the spread.",
+     "start": 558,
+     "end": 618
+    },
+    {
+     "text": "A market order buys right away, at the best ask.",
+     "start": 618,
+     "end": 714
+    },
+    {
+     "text": "A limit order at $99 joins the queue,",
+     "start": 714,
+     "end": 803
+    },
+    {
+     "text": "and waits for a seller to come down to it.",
+     "start": 803,
+     "end": 895
+    }
+   ],
+   "snapped": 11,
+   "needed": 11
+  },
+  {
+   "id": "matching",
+   "chapter": "Matching engine & price",
+   "audio": "vo/s5.mp3",
+   "audioFrom": 8,
+   "from": 2648,
+   "frames": 705,
+   "phrases": [
+    {
+     "text": "The exchange's matching engine",
+     "start": 8,
+     "end": 66
+    },
+    {
+     "text": "pairs buyers and sellers in microseconds:",
+     "start": 66,
+     "end": 141
+    },
+    {
+     "text": "best price first,",
+     "start": 141,
+     "end": 178
+    },
+    {
+     "text": "then first come, first served.",
+     "start": 178,
+     "end": 245
+    },
+    {
+     "text": "And here's the key.",
+     "start": 245,
+     "end": 282
+    },
+    {
+     "text": "The price you see is simply the last trade.",
+     "start": 282,
+     "end": 373
+    },
+    {
+     "text": "When buyers outnumber sellers,",
+     "start": 373,
+     "end": 423
+    },
+    {
+     "text": "they keep paying the ask, and the price climbs.",
+     "start": 423,
+     "end": 508
+    },
+    {
+     "text": "When sellers rush out,",
+     "start": 508,
+     "end": 548
+    },
+    {
+     "text": "they hit the bids, and it falls.",
+     "start": 548,
+     "end": 613
+    },
+    {
+     "text": "That's supply and demand, tick by tick.",
+     "start": 613,
+     "end": 681
+    }
+   ],
+   "snapped": 9,
+   "needed": 10
+  },
+  {
+   "id": "settle",
+   "chapter": "Clearing & T+1 settlement",
+   "audio": "vo/s6.mp3",
+   "audioFrom": 8,
+   "from": 3353,
+   "frames": 436,
+   "phrases": [
+    {
+     "text": "Once matched, a clearing house steps into the middle",
+     "start": 8,
+     "end": 100
+    },
+    {
+     "text": "and guarantees the trade,",
+     "start": 100,
+     "end": 137
+    },
+    {
+     "text": "so neither side can back out.",
+     "start": 137,
+     "end": 199
+    },
+    {
+     "text": "One business day later, called T+1,",
+     "start": 199,
+     "end": 292
+    },
+    {
+     "text": "the cash and the shares actually swap,",
+     "start": 292,
+     "end": 365
+    },
+    {
+     "text": "and the stock lands in your account.",
+     "start": 365,
+     "end": 413
+    }
+   ],
+   "snapped": 4,
+   "needed": 5
+  },
+  {
+   "id": "index",
+   "chapter": "Why prices move & indexes",
+   "audio": "vo/s7.mp3",
+   "audioFrom": 8,
+   "from": 3789,
+   "frames": 558,
+   "phrases": [
+    {
+     "text": "Day to day, prices swing on news and emotion.",
+     "start": 8,
+     "end": 119
+    },
+    {
+     "text": "Over years, they tend to follow",
+     "start": 119,
+     "end": 179
+    },
+    {
+     "text": "what companies actually earn.",
+     "start": 179,
+     "end": 238
+    },
+    {
+     "text": "And when you hear \"the market is up\",",
+     "start": 238,
+     "end": 308
+    },
+    {
+     "text": "that usually means an index,",
+     "start": 308,
+     "end": 368
+    },
+    {
+     "text": "like the S&P 500, or the Nifty 50,",
+     "start": 368,
+     "end": 455
+    },
+    {
+     "text": "which tracks a basket of large companies at once.",
+     "start": 455,
+     "end": 534
+    }
+   ],
+   "snapped": 6,
+   "needed": 6
+  },
+  {
+   "id": "recap",
+   "chapter": "Recap",
+   "audio": "vo/s8.mp3",
+   "audioFrom": 8,
+   "from": 4347,
+   "frames": 664,
+   "phrases": [
+    {
+     "text": "So, to recap.",
+     "start": 8,
+     "end": 59
+    },
+    {
+     "text": "A company issues shares.",
+     "start": 59,
+     "end": 118
+    },
+    {
+     "text": "Your broker sends your order to the exchange.",
+     "start": 118,
+     "end": 199
+    },
+    {
+     "text": "The order book matches it with a seller.",
+     "start": 199,
+     "end": 273
+    },
+    {
+     "text": "The clearing house guarantees it.",
+     "start": 273,
+     "end": 337
+    },
+    {
+     "text": "And settlement delivers it.",
+     "start": 337,
+     "end": 379
+    },
+    {
+     "text": "That's how the stock market works.",
+     "start": 379,
+     "end": 435
+    },
+    {
+     "text": "If this made it click, subscribe for the next breakdown.",
+     "start": 435,
+     "end": 554
+    },
+    {
+     "text": "This video is for education, not financial advice.",
+     "start": 554,
+     "end": 641
+    }
+   ],
+   "snapped": 8,
+   "needed": 8
+  }
+ ]
+}

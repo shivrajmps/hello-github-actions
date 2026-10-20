@@ -1,0 +1,13 @@
+import fs from "node:fs";
+const tl = JSON.parse(fs.readFileSync("src/timeline.json"));
+const ts = (fr) => { const ms = Math.round((fr / tl.fps) * 1000); const h = Math.floor(ms / 3600000), m = Math.floor(ms / 60000) % 60, s = Math.floor(ms / 1000) % 60; return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")},${String(ms % 1000).padStart(3, "0")}`; };
+let n = 0, srt = "";
+for (const s of tl.scenes) s.phrases.forEach((p, i) => { const end = (s.phrases[i + 1]?.start ?? p.end + 12); srt += `${++n}\n${ts(s.from + p.start)} --> ${ts(s.from + Math.min(end, s.frames))}\n${p.text}\n\n`; });
+fs.writeFileSync("out/captions.srt", srt);
+const mmss = (fr) => { const t = Math.floor(fr / tl.fps); return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`; };
+const ch = tl.scenes.map((s, i) => `${mmss(i === 0 ? 0 : s.from)} ${s.chapter}`).join("\n");
+fs.writeFileSync("out/chapters.txt", ch + "\n");
+let edl = "| # | Scene | In | Out | Narration (start) | On-screen |\n|---|---|---|---|---|---|\n";
+tl.scenes.forEach((s, i) => { edl += `| ${i + 1} | ${s.chapter} | ${mmss(s.from)} | ${mmss(s.from + s.frames)} | ${s.phrases[0].text} | see plan |\n`; });
+fs.writeFileSync("out/edl.md", edl);
+console.log(ch); console.log(n, "captions");
