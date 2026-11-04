@@ -1,0 +1,7 @@
+05-putting-it-together  total 96.41s
+   0.50 -   13.70  s1  You now have three lenses. P/E for profit. P/B for assets. EV to EBITDA for the whole busi
+  14.25 -   26.55  s2  Check one: compare with peers. A P/E of thirty is normal for a fast-growing IT company, an
+  27.10 -   38.17  s3  Check two: compare with the company's own history. If it usually trades at fifteen times e
+  38.72 -   52.14  s4  Check three: look at the quality behind the number. Is return on equity high? Is debt low?
+  52.69 -   80.34  s5  A quick worked example. Company A: P/E twelve, P/B one, EV to EBITDA five. But return on e
+  80.89 -   94.81  s6  So the ratio is the start of the conversation, not the end. The price tells you what the m

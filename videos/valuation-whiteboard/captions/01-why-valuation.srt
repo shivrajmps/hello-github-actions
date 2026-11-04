@@ -1,0 +1,92 @@
+1
+00:00:00,500 --> 00:00:02,250
+Two shops on the same street.
+
+2
+00:00:02,450 --> 00:00:04,883
+Shop A is selling for ten lakh rupees.
+
+3
+00:00:05,083 --> 00:00:07,259
+Shop B is selling for fifty lakh.
+
+4
+00:00:07,459 --> 00:00:08,789
+Which one is cheaper?
+
+5
+00:00:08,989 --> 00:00:10,122
+Trick question.
+
+6
+00:00:10,322 --> 00:00:12,287
+You cannot know from the price alone.
+
+7
+00:00:13,037 --> 00:00:15,717
+Because what you are really buying is not the shop.
+
+8
+00:00:15,917 --> 00:00:18,371
+It is the profit the shop makes every year.
+
+9
+00:00:18,571 --> 00:00:20,364
+Shop A earns one lakh a year.
+
+10
+00:00:20,564 --> 00:00:22,459
+Shop B earns ten lakh a year.
+
+11
+00:00:23,209 --> 00:00:25,663
+So Shop A takes ten years to pay you back.
+
+12
+00:00:25,863 --> 00:00:27,592
+Shop B takes just five.
+
+13
+00:00:27,792 --> 00:00:30,992
+The expensive-looking shop is actually the cheaper deal.
+
+14
+00:00:31,742 --> 00:00:33,939
+That is the whole game of valuation.
+
+15
+00:00:34,139 --> 00:00:35,668
+Price is what you pay.
+
+16
+00:00:35,868 --> 00:00:37,453
+Value is what you get.
+
+17
+00:00:37,653 --> 00:00:40,741
+A valuation ratio simply puts the two side by side,
+
+18
+00:00:40,741 --> 00:00:43,797
+so you can compare any business with any other.
+
+19
+00:00:44,547 --> 00:00:46,761
+A share works exactly like that shop.
+
+20
+00:00:46,961 --> 00:00:49,641
+And every number you need, profit, assets, debt,
+
+21
+00:00:49,641 --> 00:00:52,359
+is already sitting in the company's accounts.
+
+22
+00:00:52,559 --> 00:00:55,775
+The next three lessons show where to find them,
+
+23
+00:00:55,775 --> 00:00:59,621
+and what to do with them: P/E, P/B, and EV to EBITDA.
+

@@ -1,0 +1,7 @@
+02-pe-ratio  total 83.85s
+   0.50 -   10.09  s1  P/E. Price to Earnings. The most used, and most misused, number in the stock market. Let's
+  10.64 -   25.96  s2  Start at the profit and loss statement. Revenue at the top, one thousand crore. Minus cost
+  26.51 -   33.64  s3  Divide that by the number of shares, ten crore shares, and you get earnings per share: ten
+  34.19 -   42.73  s4  The P is just today's share price. Say two hundred rupees. So P/E is two hundred divided b
+  43.28 -   62.36  s5  Read it like the shop. At a P/E of twenty, you are paying twenty rupees for every one rupe
+  62.91 -   82.25  s6  Three warnings. A high P/E is not always expensive: the market may expect fast growth. A l

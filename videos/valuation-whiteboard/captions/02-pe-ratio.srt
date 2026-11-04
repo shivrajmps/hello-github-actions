@@ -1,0 +1,124 @@
+1
+00:00:00,500 --> 00:00:01,648
+P/E.
+
+2
+00:00:01,848 --> 00:00:03,129
+Price to Earnings.
+
+3
+00:00:03,329 --> 00:00:06,868
+The most used, and most misused, number in the stock market.
+
+4
+00:00:07,068 --> 00:00:09,885
+Let's build it from the accounts, line by line.
+
+5
+00:00:10,635 --> 00:00:12,833
+Start at the profit and loss statement.
+
+6
+00:00:13,033 --> 00:00:15,551
+Revenue at the top, one thousand crore.
+
+7
+00:00:15,751 --> 00:00:18,223
+Minus costs, eight hundred and twenty.
+
+8
+00:00:18,423 --> 00:00:20,121
+Minus interest, thirty.
+
+9
+00:00:20,321 --> 00:00:21,894
+Minus tax, fifty.
+
+10
+00:00:22,094 --> 00:00:25,764
+What is left at the bottom is net profit: one hundred crore.
+
+11
+00:00:26,514 --> 00:00:29,523
+Divide that by the number of shares, ten crore shares,
+
+12
+00:00:29,523 --> 00:00:32,125
+and you get earnings per share: ten rupees.
+
+13
+00:00:32,325 --> 00:00:33,438
+That is the E.
+
+14
+00:00:34,188 --> 00:00:36,303
+The P is just today's share price.
+
+15
+00:00:36,503 --> 00:00:38,168
+Say two hundred rupees.
+
+16
+00:00:38,368 --> 00:00:42,529
+So P/E is two hundred divided by ten, which is twenty.
+
+17
+00:00:43,279 --> 00:00:44,588
+Read it like the shop.
+
+18
+00:00:44,788 --> 00:00:46,046
+At a P/E of twenty,
+
+19
+00:00:46,046 --> 00:00:50,634
+you are paying twenty rupees for every one rupee of yearly profit.
+
+20
+00:00:50,834 --> 00:00:51,998
+If profits stayed flat,
+
+21
+00:00:51,998 --> 00:00:54,781
+it would take twenty years to earn your money back.
+
+22
+00:00:54,981 --> 00:00:55,840
+Flip it over:
+
+23
+00:00:55,840 --> 00:00:59,689
+one divided by twenty is a five percent earnings yield.
+
+24
+00:00:59,889 --> 00:01:02,161
+Now compare that with a fixed deposit.
+
+25
+00:01:02,911 --> 00:01:04,031
+Three warnings.
+
+26
+00:01:04,231 --> 00:01:06,727
+A high P/E is not always expensive:
+
+27
+00:01:06,727 --> 00:01:09,373
+the market may expect fast growth.
+
+28
+00:01:09,573 --> 00:01:13,905
+A low P/E is not always cheap: profits may be about to fall.
+
+29
+00:01:14,105 --> 00:01:17,519
+And if there is no profit, there is no P/E at all.
+
+30
+00:01:17,719 --> 00:01:20,100
+Always compare against the same industry,
+
+31
+00:01:20,100 --> 00:01:22,050
+and the company's own history.
+

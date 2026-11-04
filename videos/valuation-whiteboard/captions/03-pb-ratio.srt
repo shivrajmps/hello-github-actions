@@ -1,0 +1,128 @@
+1
+00:00:00,500 --> 00:00:01,719
+P/B.
+
+2
+00:00:01,919 --> 00:00:03,069
+Price to Book.
+
+3
+00:00:03,269 --> 00:00:05,356
+This one does not care about profit.
+
+4
+00:00:05,556 --> 00:00:09,342
+It asks a simpler question: what is the company worth on paper,
+
+5
+00:00:09,342 --> 00:00:13,578
+if you added up everything it owns and paid off everything it owes?
+
+6
+00:00:14,328 --> 00:00:15,762
+Open the balance sheet.
+
+7
+00:00:15,962 --> 00:00:19,646
+On one side, everything the company owns: cash, factories,
+
+8
+00:00:19,646 --> 00:00:21,829
+inventory, money customers owe.
+
+9
+00:00:22,029 --> 00:00:24,014
+Say five hundred crore of assets.
+
+10
+00:00:24,214 --> 00:00:28,033
+On the other side, everything it owes: loans and unpaid bills.
+
+11
+00:00:28,233 --> 00:00:29,837
+Say three hundred crore.
+
+12
+00:00:30,587 --> 00:00:33,056
+Assets minus liabilities is book value,
+
+13
+00:00:33,056 --> 00:00:36,561
+also called shareholders' equity: two hundred crore.
+
+14
+00:00:36,761 --> 00:00:39,274
+That is the accountant's answer to the question,
+
+15
+00:00:39,274 --> 00:00:40,943
+what is left for the owners.
+
+16
+00:00:41,693 --> 00:00:43,298
+Divide by ten crore shares,
+
+17
+00:00:43,298 --> 00:00:46,003
+and book value per share is twenty rupees.
+
+18
+00:00:46,203 --> 00:00:47,800
+The share price is forty.
+
+19
+00:00:47,999 --> 00:00:51,285
+So P/B is forty over twenty, which is two.
+
+20
+00:00:52,036 --> 00:00:55,859
+A P/B of two means the market pays two rupees for every
+
+21
+00:00:55,859 --> 00:00:58,650
+one rupee of net assets on the books.
+
+22
+00:00:58,850 --> 00:00:59,383
+Below one,
+
+23
+00:00:59,383 --> 00:01:02,520
+you are buying assets for less than their stated value.
+
+24
+00:01:02,720 --> 00:01:05,763
+That is either a bargain, or the market thinks those assets
+
+25
+00:01:05,763 --> 00:01:08,028
+are not really worth what the books say.
+
+26
+00:01:08,778 --> 00:01:12,287
+Where it shines: banks, insurers, and asset-heavy businesses,
+
+27
+00:01:12,287 --> 00:01:14,795
+where the balance sheet is the business.
+
+28
+00:01:14,995 --> 00:01:18,294
+Where it fails: software or brands, whose real value,
+
+29
+00:01:18,294 --> 00:01:21,308
+people and ideas, never shows up as an asset.
+
+30
+00:01:21,508 --> 00:01:23,869
+And always pair it with return on equity.
+
+31
+00:01:24,069 --> 00:01:27,721
+A company earning twenty percent on its book deserves a
+
+32
+00:01:27,721 --> 00:01:30,128
+higher P/B than one earning five.
+

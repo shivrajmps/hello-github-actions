@@ -1,0 +1,136 @@
+1
+00:00:00,500 --> 00:00:02,085
+You now have three lenses.
+
+2
+00:00:02,285 --> 00:00:04,078
+P/E for profit.
+
+3
+00:00:04,278 --> 00:00:06,092
+P/B for assets.
+
+4
+00:00:06,292 --> 00:00:09,322
+EV to EBITDA for the whole business, debt included.
+
+5
+00:00:09,522 --> 00:00:11,378
+No single one is the answer.
+
+6
+00:00:11,578 --> 00:00:13,504
+The skill is reading them together.
+
+7
+00:00:14,254 --> 00:00:16,175
+Check one: compare with peers.
+
+8
+00:00:16,375 --> 00:00:20,321
+A P/E of thirty is normal for a fast-growing IT company,
+
+9
+00:00:20,321 --> 00:00:22,797
+and alarming for a cement maker.
+
+10
+00:00:22,997 --> 00:00:26,347
+A ratio only means something next to similar businesses.
+
+11
+00:00:27,097 --> 00:00:29,892
+Check two: compare with the company's own history.
+
+12
+00:00:30,092 --> 00:00:33,446
+If it usually trades at fifteen times earnings and is now
+
+13
+00:00:33,446 --> 00:00:35,597
+at twenty-five, ask what changed.
+
+14
+00:00:35,797 --> 00:00:37,974
+New growth, or just a hot market?
+
+15
+00:00:38,724 --> 00:00:41,498
+Check three: look at the quality behind the number.
+
+16
+00:00:41,698 --> 00:00:43,402
+Is return on equity high?
+
+17
+00:00:43,602 --> 00:00:44,649
+Is debt low?
+
+18
+00:00:44,849 --> 00:00:48,007
+Is the cash flow real, not just accounting profit?
+
+19
+00:00:48,207 --> 00:00:51,941
+A cheap ratio on a bad business is a trap, not a bargain.
+
+20
+00:00:52,691 --> 00:00:54,174
+A quick worked example.
+
+21
+00:00:54,374 --> 00:00:58,812
+Company A: P/E twelve, P/B one, EV to EBITDA five.
+
+22
+00:00:59,012 --> 00:01:02,533
+But return on equity six percent, and sales are shrinking.
+
+23
+00:01:02,733 --> 00:01:08,259
+Company B: P/E twenty-five, P/B five, EV to EBITDA fourteen.
+
+24
+00:01:08,459 --> 00:01:10,571
+Return on equity twenty-two percent,
+
+25
+00:01:10,571 --> 00:01:12,598
+growing fifteen percent a year.
+
+26
+00:01:12,798 --> 00:01:13,891
+A looks cheap.
+
+27
+00:01:14,091 --> 00:01:15,585
+B looks expensive.
+
+28
+00:01:15,785 --> 00:01:18,120
+Many great investors would pay up for B,
+
+29
+00:01:18,120 --> 00:01:20,138
+and many have been burned by A.
+
+30
+00:01:20,888 --> 00:01:24,451
+So the ratio is the start of the conversation, not the end.
+
+31
+00:01:24,651 --> 00:01:26,752
+The price tells you what the market thinks.
+
+32
+00:01:26,952 --> 00:01:29,035
+The accounts tell you what the business is.
+
+33
+00:01:29,235 --> 00:01:32,307
+Valuation is simply the habit of checking one against the
+
+34
+00:01:32,307 --> 00:01:34,612
+other, before you hand over your money.
+

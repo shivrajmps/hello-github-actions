@@ -1,0 +1,48 @@
+{
+ "videos": [
+  {"id":"01-why-valuation","title":"WHY VALUATION","label":"WHITEBOARD LESSON 01 · WHY VALUATION","chapters":["TWO SHOPS","PAYBACK","PRICE VS VALUE"],
+   "scenes":[
+    {"id":"s1","text":"Two shops on the same street. Shop A is selling for ten lakh rupees. Shop B is selling for fifty lakh. Which one is cheaper? Trick question. You cannot know from the price alone."},
+    {"id":"s2","text":"Because what you are really buying is not the shop. It is the profit the shop makes every year. Shop A earns one lakh a year. Shop B earns ten lakh a year."},
+    {"id":"s3","text":"So Shop A takes ten years to pay you back. Shop B takes just five. The expensive-looking shop is actually the cheaper deal."},
+    {"id":"s4","text":"That is the whole game of valuation. Price is what you pay. Value is what you get. A valuation ratio simply puts the two side by side, so you can compare any business with any other."},
+    {"id":"s5","text":"A share works exactly like that shop. And every number you need, profit, assets, debt, is already sitting in the company's accounts. The next three lessons show where to find them, and what to do with them: P/E, P/B, and EV to EBITDA."}
+   ]},
+  {"id":"02-pe-ratio","title":"P/E RATIO","label":"WHITEBOARD LESSON 02 · P/E RATIO","chapters":["THE P&L","EPS","READING P/E"],
+   "scenes":[
+    {"id":"s1","text":"P/E. Price to Earnings. The most used, and most misused, number in the stock market. Let's build it from the accounts, line by line."},
+    {"id":"s2","text":"Start at the profit and loss statement. Revenue at the top, one thousand crore. Minus costs, eight hundred and twenty. Minus interest, thirty. Minus tax, fifty. What is left at the bottom is net profit: one hundred crore."},
+    {"id":"s3","text":"Divide that by the number of shares, ten crore shares, and you get earnings per share: ten rupees. That is the E."},
+    {"id":"s4","text":"The P is just today's share price. Say two hundred rupees. So P/E is two hundred divided by ten, which is twenty."},
+    {"id":"s5","text":"Read it like the shop. At a P/E of twenty, you are paying twenty rupees for every one rupee of yearly profit. If profits stayed flat, it would take twenty years to earn your money back. Flip it over: one divided by twenty is a five percent earnings yield. Now compare that with a fixed deposit."},
+    {"id":"s6","text":"Three warnings. A high P/E is not always expensive: the market may expect fast growth. A low P/E is not always cheap: profits may be about to fall. And if there is no profit, there is no P/E at all. Always compare against the same industry, and the company's own history."}
+   ]},
+  {"id":"03-pb-ratio","title":"P/B RATIO","label":"WHITEBOARD LESSON 03 · P/B RATIO","chapters":["BALANCE SHEET","BOOK VALUE","READING P/B"],
+   "scenes":[
+    {"id":"s1","text":"P/B. Price to Book. This one does not care about profit. It asks a simpler question: what is the company worth on paper, if you added up everything it owns and paid off everything it owes?"},
+    {"id":"s2","text":"Open the balance sheet. On one side, everything the company owns: cash, factories, inventory, money customers owe. Say five hundred crore of assets. On the other side, everything it owes: loans and unpaid bills. Say three hundred crore."},
+    {"id":"s3","text":"Assets minus liabilities is book value, also called shareholders' equity: two hundred crore. That is the accountant's answer to the question, what is left for the owners."},
+    {"id":"s4","text":"Divide by ten crore shares, and book value per share is twenty rupees. The share price is forty. So P/B is forty over twenty, which is two."},
+    {"id":"s5","text":"A P/B of two means the market pays two rupees for every one rupee of net assets on the books. Below one, you are buying assets for less than their stated value. That is either a bargain, or the market thinks those assets are not really worth what the books say."},
+    {"id":"s6","text":"Where it shines: banks, insurers, and asset-heavy businesses, where the balance sheet is the business. Where it fails: software or brands, whose real value, people and ideas, never shows up as an asset. And always pair it with return on equity. A company earning twenty percent on its book deserves a higher P/B than one earning five."}
+   ]},
+  {"id":"04-ev-ebitda","title":"EV / EBITDA","label":"WHITEBOARD LESSON 04 · EV / EBITDA","chapters":["ENTERPRISE VALUE","EBITDA","WHY IT MATTERS"],
+   "scenes":[
+    {"id":"s1","text":"EV to EBITDA. Sounds scary. It is actually the fairest comparison tool we have. Think of buying a house that still has a loan on it."},
+    {"id":"s2","text":"The price you pay the owner is like market cap: share price times number of shares. Say one thousand crore. But you also inherit the loan: four hundred crore of debt. And you get the cash sitting in the company's bank: one hundred crore. So the real cost of the whole business is one thousand, plus four hundred, minus one hundred. Enterprise value: one thousand three hundred crore."},
+    {"id":"s3","text":"Now the earnings side. Start with operating profit from the P&L: one hundred and fifty crore. Add back depreciation and amortisation, the paper charges for wear and tear on machines: fifty crore. That gives EBITDA, earnings before interest, tax, depreciation and amortisation: two hundred crore."},
+    {"id":"s4","text":"EV over EBITDA is one thousand three hundred divided by two hundred: six and a half times. The whole business, loans included, costs six and a half years of cash operating profit."},
+    {"id":"s5","text":"Why bother? Because P/E gets distorted by debt and by tax rates. Two identical factories, one funded by loans and one by equity, show very different net profits. EV to EBITDA strips that out and compares the engine, not the financing."},
+    {"id":"s6","text":"The catch: EBITDA ignores the money needed to replace those machines. A business that must keep spending heavily on equipment is worth less than its EBITDA suggests. So always glance at capital expenditure too."}
+   ]},
+  {"id":"05-putting-it-together","title":"HOW TO JUDGE A BUSINESS","label":"WHITEBOARD LESSON 05 · PUTTING IT TOGETHER","chapters":["THREE LENSES","THREE CHECKS","A VS B"],
+   "scenes":[
+    {"id":"s1","text":"You now have three lenses. P/E for profit. P/B for assets. EV to EBITDA for the whole business, debt included. No single one is the answer. The skill is reading them together."},
+    {"id":"s2","text":"Check one: compare with peers. A P/E of thirty is normal for a fast-growing IT company, and alarming for a cement maker. A ratio only means something next to similar businesses."},
+    {"id":"s3","text":"Check two: compare with the company's own history. If it usually trades at fifteen times earnings and is now at twenty-five, ask what changed. New growth, or just a hot market?"},
+    {"id":"s4","text":"Check three: look at the quality behind the number. Is return on equity high? Is debt low? Is the cash flow real, not just accounting profit? A cheap ratio on a bad business is a trap, not a bargain."},
+    {"id":"s5","text":"A quick worked example. Company A: P/E twelve, P/B one, EV to EBITDA five. But return on equity six percent, and sales are shrinking. Company B: P/E twenty-five, P/B five, EV to EBITDA fourteen. Return on equity twenty-two percent, growing fifteen percent a year. A looks cheap. B looks expensive. Many great investors would pay up for B, and many have been burned by A."},
+    {"id":"s6","text":"So the ratio is the start of the conversation, not the end. The price tells you what the market thinks. The accounts tell you what the business is. Valuation is simply the habit of checking one against the other, before you hand over your money."}
+   ]}
+ ]
+}

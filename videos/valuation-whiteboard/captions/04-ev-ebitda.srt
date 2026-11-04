@@ -1,0 +1,140 @@
+1
+00:00:00,500 --> 00:00:01,665
+EV to EBITDA.
+
+2
+00:00:01,865 --> 00:00:02,961
+Sounds scary.
+
+3
+00:00:03,161 --> 00:00:06,106
+It is actually the fairest comparison tool we have.
+
+4
+00:00:06,306 --> 00:00:08,948
+Think of buying a house that still has a loan on it.
+
+5
+00:00:09,698 --> 00:00:12,247
+The price you pay the owner is like market cap:
+
+6
+00:00:12,247 --> 00:00:14,349
+share price times number of shares.
+
+7
+00:00:14,549 --> 00:00:16,171
+Say one thousand crore.
+
+8
+00:00:16,371 --> 00:00:19,871
+But you also inherit the loan: four hundred crore of debt.
+
+9
+00:00:20,071 --> 00:00:22,389
+And you get the cash sitting in the company's
+
+10
+00:00:22,389 --> 00:00:23,826
+bank: one hundred crore.
+
+11
+00:00:24,026 --> 00:00:27,142
+So the real cost of the whole business is one thousand,
+
+12
+00:00:27,142 --> 00:00:29,445
+plus four hundred, minus one hundred.
+
+13
+00:00:29,645 --> 00:00:32,526
+Enterprise value: one thousand three hundred crore.
+
+14
+00:00:33,276 --> 00:00:34,705
+Now the earnings side.
+
+15
+00:00:34,905 --> 00:00:37,454
+Start with operating profit from the P&L:
+
+16
+00:00:37,454 --> 00:00:39,407
+one hundred and fifty crore.
+
+17
+00:00:39,607 --> 00:00:42,120
+Add back depreciation and amortisation,
+
+18
+00:00:42,120 --> 00:00:46,264
+the paper charges for wear and tear on machines: fifty crore.
+
+19
+00:00:46,464 --> 00:00:49,547
+That gives EBITDA, earnings before interest, tax,
+
+20
+00:00:49,547 --> 00:00:52,843
+depreciation and amortisation: two hundred crore.
+
+21
+00:00:53,593 --> 00:00:57,282
+EV over EBITDA is one thousand three hundred divided by
+
+22
+00:00:57,282 --> 00:00:59,780
+two hundred: six and a half times.
+
+23
+00:00:59,980 --> 00:01:01,965
+The whole business, loans included,
+
+24
+00:01:01,965 --> 00:01:05,122
+costs six and a half years of cash operating profit.
+
+25
+00:01:05,872 --> 00:01:06,866
+Why bother?
+
+26
+00:01:07,066 --> 00:01:11,013
+Because P/E gets distorted by debt and by tax rates.
+
+27
+00:01:11,213 --> 00:01:12,733
+Two identical factories,
+
+28
+00:01:12,733 --> 00:01:17,443
+one funded by loans and one by equity, show very different net profits.
+
+29
+00:01:17,643 --> 00:01:20,497
+EV to EBITDA strips that out and compares the
+
+30
+00:01:20,497 --> 00:01:22,359
+engine, not the financing.
+
+31
+00:01:23,109 --> 00:01:23,706
+The catch:
+
+32
+00:01:23,706 --> 00:01:27,376
+EBITDA ignores the money needed to replace those machines.
+
+33
+00:01:27,576 --> 00:01:30,833
+A business that must keep spending heavily on equipment is
+
+34
+00:01:30,833 --> 00:01:33,060
+worth less than its EBITDA suggests.
+
+35
+00:01:33,260 --> 00:01:36,012
+So always glance at capital expenditure too.
+

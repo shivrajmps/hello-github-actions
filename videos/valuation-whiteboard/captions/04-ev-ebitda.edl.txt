@@ -1,0 +1,7 @@
+04-ev-ebitda  total 97.81s
+   0.50 -    9.15  s1  EV to EBITDA. Sounds scary. It is actually the fairest comparison tool we have. Think of b
+   9.70 -   32.73  s2  The price you pay the owner is like market cap: share price times number of shares. Say on
+  33.28 -   53.04  s3  Now the earnings side. Start with operating profit from the P&L: one hundred and fifty cro
+  53.59 -   65.32  s4  EV over EBITDA is one thousand three hundred divided by two hundred: six and a half times.
+  65.87 -   82.56  s5  Why bother? Because P/E gets distorted by debt and by tax rates. Two identical factories, 
+  83.11 -   96.21  s6  The catch: EBITDA ignores the money needed to replace those machines. A business that must

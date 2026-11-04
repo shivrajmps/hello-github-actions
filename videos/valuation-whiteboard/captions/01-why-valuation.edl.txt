@@ -1,0 +1,6 @@
+01-why-valuation  total 61.42s
+   0.50 -   12.49  s1  Two shops on the same street. Shop A is selling for ten lakh rupees. Shop B is selling for
+  13.04 -   22.66  s2  Because what you are really buying is not the shop. It is the profit the shop makes every 
+  23.21 -   31.19  s3  So Shop A takes ten years to pay you back. Shop B takes just five. The expensive-looking s
+  31.74 -   44.00  s4  That is the whole game of valuation. Price is what you pay. Value is what you get. A valua
+  44.55 -   59.82  s5  A share works exactly like that shop. And every number you need, profit, assets, debt, is 

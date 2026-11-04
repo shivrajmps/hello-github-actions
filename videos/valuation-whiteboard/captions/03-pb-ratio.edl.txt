@@ -1,0 +1,7 @@
+03-pb-ratio  total 91.93s
+   0.50 -   13.78  s1  P/B. Price to Book. This one does not care about profit. It asks a simpler question: what 
+  14.33 -   30.04  s2  Open the balance sheet. On one side, everything the company owns: cash, factories, invento
+  30.59 -   41.14  s3  Assets minus liabilities is book value, also called shareholders' equity: two hundred cror
+  41.69 -   51.49  s4  Divide by ten crore shares, and book value per share is twenty rupees. The share price is 
+  52.04 -   68.23  s5  A P/B of two means the market pays two rupees for every one rupee of net assets on the boo
+  68.78 -   90.33  s6  Where it shines: banks, insurers, and asset-heavy businesses, where the balance sheet is t
