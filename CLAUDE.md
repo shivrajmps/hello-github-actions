@@ -1,0 +1,4 @@
+# Project notes
+
+- Save every output from the yt-* skills (scripts, title/thumbnail pairings, edit lists, shorts, retention reads, plans, audits) under `AI Video Editing/`, in the subfolder its README lists. One markdown file per video, named by topic slug.
+- The voice profile lives at `.claude/youtube/voice.md`. Read it before any yt-* skill runs; if it is still the blank template, say so in the output.
