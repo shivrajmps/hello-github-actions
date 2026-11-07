@@ -1,0 +1,5 @@
+# Day Trader skill pack: your own trading data (portfolio, plans, orders, SEC user agent)
+trader/
+
+__pycache__/
+*.pyc
