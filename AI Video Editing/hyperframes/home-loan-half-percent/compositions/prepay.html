@@ -1,0 +1,111 @@
+<template>
+  <style>
+    @font-face { font-family: "Kalam"; src: url("assets/fonts/kalam-devanagari-700-normal.woff2") format("woff2"); font-weight: 700; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: "Kalam"; src: url("assets/fonts/kalam-latin-700-normal.woff2") format("woff2"); font-weight: 700; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Kalam"; src: url("assets/fonts/kalam-devanagari-400-normal.woff2") format("woff2"); font-weight: 400; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: "Kalam"; src: url("assets/fonts/kalam-latin-400-normal.woff2") format("woff2"); font-weight: 400; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Baloo 2"; src: url("assets/fonts/baloo-2-devanagari-700-normal.woff2") format("woff2"); font-weight: 700; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: "Baloo 2"; src: url("assets/fonts/baloo-2-latin-700-normal.woff2") format("woff2"); font-weight: 700; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+#root { position: absolute; inset: 0; overflow: hidden; --ink: #2B2924; --paper: #F7F4EC; --yellow: #FFD84A; --red: #D94A31; --green: #2E8B4A; --blue: #3D6FB4; font-family: "Kalam", cursive; color: var(--ink); }
+.ink path, .ink line, .ink circle, .ink rect, .ink ellipse, .ink polyline { fill: none; stroke: var(--ink); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.ink .thin { stroke-width: 4.5; }
+.ink .red { stroke: var(--red); } .ink .green { stroke: var(--green); } .ink .blue { stroke: var(--blue); } .ink .yellow { stroke: var(--yellow); }
+.ink .fill-yellow { fill: var(--yellow); stroke: none; } .ink .fill-red { fill: var(--red); stroke: none; } .ink .fill-paper { fill: var(--paper); }
+.hw { position: absolute; font-family: "Kalam", cursive; font-weight: 700; color: var(--ink); white-space: nowrap; line-height: 1.1; }
+.num { font-family: "Baloo 2", sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+.red-t { color: var(--red); } .green-t { color: var(--green); } .blue-t { color: var(--blue); }
+.wrap { position: absolute; isolation: isolate; }
+.hl { position: absolute; height: 0.42em; background: var(--yellow); border-radius: 4px 9px 5px 10px; transform-origin: 0 50%; z-index: -1; }
+.note { position: absolute; background: var(--yellow); border: 4px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 10px 26px; font-family: "Kalam", cursive; font-weight: 700; color: var(--ink); white-space: nowrap; }
+
+    #pp-house { position: absolute; left: 140px; top: 90px; width: 360px; height: 300px; }
+    #pp-emi { position: absolute; left: 560px; top: 110px; width: 520px; }
+    #pp-emi .lbl { font-size: 48px; display: block; }
+    #pp-emi .v { font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 130px; line-height: 1; display: block; }
+    #pp-note { left: 1120px; top: 120px; font-size: 76px; transform: rotate(-6deg); }
+    #pp-plus { position: absolute; left: 1080px; top: 90px; width: 560px; height: 240px; }
+    #pp-ruler { position: absolute; left: 160px; top: 470px; width: 1600px; height: 160px; }
+    #pp-r30 { left: 160px; top: 400px; font-size: 56px; } #pp-r15 { left: 160px; top: 400px; font-size: 56px; color: var(--green); }
+    #pp-yrs { left: 1200px; top: 390px; font-size: 56px; }
+    #pp-yrs .num { font-size: 100px; }
+    #pp-int { position: absolute; left: 160px; top: 650px; width: 1600px; }
+    #pp-int .hw { position: absolute; top: 0; font-size: 50px; }
+    #pp-int .v { font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 92px; display: block; line-height: 1; }
+    #pp-save { position: absolute; left: 0; right: 0; top: 440px; text-align: center; font-size: 72px; }
+    #pp-save .num { display: block; font-size: 190px; line-height: 1; color: var(--green); }
+    #pp-save-circle { position: absolute; left: 480px; top: 470px; width: 960px; height: 300px; }
+    #pp-alt { position: absolute; left: 0; right: 0; top: 200px; text-align: center; font-size: 66px; line-height: 1.4; }
+  </style>
+  <div id="root" data-composition-id="prepay" data-width="1920" data-height="1080">
+    <div id="pp-b1" class="clip" data-start="0" data-duration="64.800" data-track-index="0" style="position:absolute;inset:0">
+      <svg id="pp-house" class="ink" viewBox="0 0 360 300"><g id="pp-hg"><path class="blue" d="" /><path d="" /><path d="" /><path class="thin" d="" /></g></svg>
+      <div id="pp-emi" class="hw"><span class="lbl">EMI / महीना</span><span class="v" id="pp-emiv">₹34,000</span></div>
+      <svg id="pp-plus" class="ink" viewBox="0 0 560 240"><path id="pp-plus-a" class="green" d="" /></svg>
+      <div class="note" id="pp-note">+ ₹10,000 <span style="font-size:0.6em">principal</span></div>
+      <div class="hw" id="pp-r30">Tenure: <span class="num" id="pp-r30v">30 साल</span></div>
+      <svg id="pp-ruler" class="ink" viewBox="0 0 1600 160">
+        <g id="pp-rg"><path id="pp-rline" d="" /><path id="pp-rticks" class="thin" d="" /></g>
+        <rect id="pp-rfill" x="0" y="40" width="1600" height="48" class="fill-red" opacity="0.28" />
+        <path id="pp-rcut" class="green" d="" />
+      </svg>
+      <div class="hw" id="pp-yrs"><span class="num" id="pp-yrsv">30</span> साल</div>
+      <div id="pp-int">
+        <div class="hw" id="pp-i1" style="left:0">30 साल में interest<span class="v red-t">₹75.9 लाख</span></div>
+        <div class="hw" id="pp-i2" style="left:900px">15 साल में interest<span class="v green-t" id="pp-i2v">₹35 लाख</span></div>
+      </div>
+    </div>
+    <div id="pp-b2" class="clip" data-start="64.800" data-duration="66.680" data-track-index="0" style="position:absolute;inset:0">
+      <div class="hw" id="pp-save">आपकी <span class="green-t">saving</span><span class="num" id="pp-savev">₹40 लाख</span></div>
+      <svg id="pp-save-circle" class="ink" viewBox="0 0 960 300"><path class="green" d="" /></svg>
+      <div class="hw" id="pp-alt">₹34,000 की जगह <span class="num">₹44,000</span>… या <span class="num">₹50,000</span><br /><span style="font-size:0.8em">हर extra रुपया → <span class="green-t">principal</span></span></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const T = {"y30": 5.3, "plus10k": 17.3, "emi34": 16.6, "emi44": 37.3, "y15": 44.3, "int": 48.8, "alt": 65.1, "save": 85.7};
+      const h = document.querySelectorAll("#pp-hg path");
+      h[0].setAttribute("d", hwLine(30, 140, 180, 25, 61) + " " + hwLine(180, 25, 330, 140, 62).replace("M", "L"));
+      h[1].setAttribute("d", hwRect(70, 138, 220, 140, 63)); h[2].setAttribute("d", hwRect(152, 190, 54, 88, 64));
+      h[3].setAttribute("d", hwRect(92, 165, 40, 40, 65) + " " + hwRect(228, 165, 40, 40, 66));
+      // ruler: 30 ticks over 1600px
+      document.getElementById("pp-rline").setAttribute("d", hwLine(0, 90, 1600, 90, 70, 2));
+      let d = ""; for (let i = 0; i <= 30; i++) { const x = (i / 30) * 1580 + 10; d += hwLine(x, i % 5 ? 70 : 50, x, 110, 71 + i, 1) + " "; }
+      document.getElementById("pp-rticks").setAttribute("d", d);
+      document.getElementById("pp-rcut").setAttribute("d", hwLine(800, 20, 800, 150, 99, 3));
+      document.getElementById("pp-plus-a").setAttribute("d", hwArrowPath(200, 120, "swoop", 72));
+      gsap.set("#pp-plus svg, #pp-plus", { x: 40, y: 60 });
+      gsap.set(["#pp-emi", "#pp-note", "#pp-r30", "#pp-yrs", "#pp-i1", "#pp-i2", "#pp-save", "#pp-alt"], { opacity: 0 });
+      gsap.set("#pp-rfill", { scaleX: 1, transformOrigin: "0 50%", opacity: 0 });
+      tl.to("#pp-rfill", { opacity: 0.28, duration: 0.4 }, T.y30 + 1.0);
+      let t = hwDrawAll(tl, "#pp-hg", 0.1, 0.35);
+      tl.fromTo("#pp-r30", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.3 }, T.y30);
+      hwDrawOn(tl, "#pp-rline", T.y30, 0.9, "power1.inOut"); hwDrawOn(tl, "#pp-rticks", T.y30 + 0.3, 1.2, "none");
+      tl.fromTo("#pp-yrs", { opacity: 0 }, { opacity: 1, duration: 0.3 }, T.y30 + 1.2);
+      tl.to("#pp-emi", { opacity: 1, duration: 0.3 }, T.emi34);
+      // +10,000 sticky note slaps on
+      tl.fromTo("#pp-note", { opacity: 0, scale: 1.6, rotation: -14 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.4, ease: "back.out(1.4)" }, T.plus10k);
+      hwDrawOn(tl, "#pp-plus-a", T.plus10k + 0.5, 0.5);
+      // EMI 34,000 -> 44,000
+      hwCount(tl, "#pp-emiv", 34000, 44000, T.emi44, 1.0, v => "₹" + Math.round(v).toLocaleString("en-IN"));
+      tl.to("#pp-emiv", { color: "#3BA55D", duration: 0.3 }, T.emi44 + 0.9);
+      // 30 -> 15: the red fill shrinks to half, a green cut mark draws, the years count down
+      tl.to("#pp-rfill", { scaleX: 0.5, duration: 1.4, ease: "power2.inOut" }, T.y15);
+      hwDrawOn(tl, "#pp-rcut", T.y15 + 1.2, 0.3);
+      hwCount(tl, "#pp-yrsv", 30, 15, T.y15, 1.4, v => String(Math.round(v)));
+      tl.to("#pp-yrs", { color: "#3BA55D", duration: 0.3 }, T.y15 + 1.2);
+      tl.to("#pp-r30v", { textContent: "15 साल", duration: 0.01 }, T.y15 + 1.3);
+      // interest 75.9 -> 35
+      tl.to("#pp-i1", { opacity: 1, duration: 0.3 }, T.int);
+      tl.to("#pp-i2", { opacity: 1, duration: 0.3 }, T.int + 1.0);
+      hwBoil(tl, ["#pp-hg", "#pp-rg", "#pp-plus"], { amp: 1.2, rot: 0.25, seed: 15 });
+      /* beat 2: the saving */
+      document.querySelector("#pp-save-circle path").setAttribute("d", hwWobbleEllipse(480, 150, 450, 130, 88, 3));
+      tl.fromTo("#pp-save", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, T.save);
+      hwDrawOn(tl, "#pp-save-circle path", T.save + 0.4, 0.8);
+      tl.fromTo("#pp-alt", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35 }, T.alt);
+      hwBoil(tl, ["#pp-save-circle"], { amp: 1.2, rot: 0.2, seed: 16 });
+      window.__timelines["prepay"] = tl;
+    })();
+  </script>
+</template>

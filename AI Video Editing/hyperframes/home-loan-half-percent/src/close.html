@@ -1,0 +1,34 @@
+<template>
+  <style>
+    {{SHARED_CSS}}
+    .rec { position: absolute; left: 160px; width: 1600px; font-size: 64px; display: flex; align-items: center; gap: 30px; }
+    .rec .num { font-size: 110px; line-height: 1; min-width: 420px; text-align: right; }
+    #cl-t { left: 0; right: 0; top: 90px; text-align: center; font-size: 70px; }
+    #cl-sign { left: 0; right: 0; top: 700px; text-align: center; font-size: 96px; }
+    #cl-sign-ul { position: absolute; left: 560px; top: 820px; width: 800px; height: 40px; }
+  </style>
+  <div id="root" data-composition-id="close" data-width="1920" data-height="1080">
+    <div id="cl-b1" class="clip" data-start="0" data-duration="{{D_B1}}" data-track-index="0" style="position:absolute;inset:0">
+      <div class="hw" id="cl-t">आज की <span class="wrap" style="position:relative;display:inline-block;isolation:isolate"><span class="hl" id="cl-hl" style="left:-6px;right:-6px;bottom:4px"></span>key insights</span></div>
+      <div class="rec hw" id="cl-r1" style="top:260px"><span class="num red-t">0.5%</span><span>ज़्यादा interest = <span class="num" style="font-size:72px;min-width:0">₹6 लाख</span> extra</span></div>
+      <div class="rec hw" id="cl-r2" style="top:420px"><span class="num green-t">+₹10,000</span><span>principal हर महीने = <span class="num" style="font-size:72px;min-width:0">30 → 15 साल</span></span></div>
+      <div class="hw" id="cl-sign">— शिवराज</div>
+      <svg id="cl-sign-ul" class="ink" viewBox="0 0 800 40"><path d="" /></svg>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const T = {{CUES}};
+      gsap.set(["#cl-t", "#cl-r1", "#cl-r2", "#cl-sign"], { opacity: 0 }); gsap.set("#cl-hl", { scaleX: 0 });
+      tl.fromTo("#cl-t", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.3 }, 0.2);
+      tl.to("#cl-hl", { scaleX: 1, duration: 0.35 }, T.insights);
+      tl.fromTo("#cl-r1", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, T.r1);
+      tl.fromTo("#cl-r2", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, T.r2);
+      document.querySelector("#cl-sign-ul path").setAttribute("d", hwMarkPath(800, 40, "underline", 55));
+      tl.fromTo("#cl-sign", { opacity: 0 }, { opacity: 1, duration: 0.4 }, T.sign);
+      hwDrawOn(tl, "#cl-sign-ul path", T.sign + 0.4, 0.6);
+      window.__timelines["close"] = tl;
+    })();
+  </script>
+</template>
