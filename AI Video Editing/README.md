@@ -15,3 +15,7 @@ File naming: `<topic-slug>.md`, one file per video. Inputs you provide (transcri
 ## What does not go here
 
 No video, audio or image files. GitHub rejects files over 100 MB and git keeps every version, so one raw recording would break the repo. Keep footage, exports and thumbnail images on your drive or cloud storage, and put the filename or link in the markdown next to the edit list that refers to it. Text only here: scripts, transcripts, CSV exports, edit lists, titles.
+
+## hyperframes/
+
+HTML video projects built with the `/hyperframes` skills live here, one folder per video. The HTML, timeline and assets are tracked. Rendered MP4s are ignored by the folder's .gitignore; keep them on your drive.

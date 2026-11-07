@@ -1,0 +1,8 @@
+# HyperFrames HTML projects are tracked; rendered output is not.
+*.mp4
+*.mov
+*.webm
+*.wav
+out/
+dist/
+node_modules/
