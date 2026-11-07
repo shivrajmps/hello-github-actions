@@ -1,0 +1,142 @@
+<template>
+  <style>
+    {{SHARED_CSS}}
+    #board-stage { position: absolute; inset: 0; transform-origin: 960px 480px; }
+    .cust { position: absolute; top: 90px; width: 760px; height: 760px; }
+    #board-A { left: 120px; } #board-B { left: 1040px; }
+    .cust svg.house { position: absolute; left: 230px; top: 0; width: 300px; height: 250px; }
+    .cust .name { position: absolute; left: 0; width: 760px; top: 255px; text-align: center; font-size: 62px; }
+    .cust .row { position: absolute; left: 60px; width: 640px; font-size: 52px; display: flex; justify-content: space-between; align-items: baseline; }
+    .cust .row .v { font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 60px; }
+    .r1 { top: 340px; } .r2 { top: 420px; } .r3 { top: 500px; }
+    .cust .emi { position: absolute; left: 60px; width: 640px; top: 590px; text-align: center; }
+    .cust .emi .lbl { font-size: 46px; display: block; }
+    .cust .emi .v { font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 110px; line-height: 1; display: block; }
+    #board-mid { position: absolute; left: 880px; top: 90px; width: 160px; height: 760px; }
+    #board-vs { position: absolute; left: 0; width: 160px; top: 300px; text-align: center; font-size: 72px; color: var(--red); }
+    #board-loan { position: absolute; left: 0; right: 0; top: 24px; text-align: center; font-size: 60px; }
+    #board-loan .num { font-size: 76px; }
+    /* interest stage */
+    #board-int { position: absolute; inset: 0; }
+    .coins { position: absolute; bottom: 300px; width: 420px; height: 420px; }
+    #board-coinsA { left: 290px; } #board-coinsB { left: 1210px; }
+    .tot { position: absolute; width: 760px; text-align: center; top: 150px; font-size: 48px; }
+    .tot .v { display: block; font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 104px; line-height: 1.05; color: var(--red); }
+    #board-totA { left: 120px; } #board-totB { left: 1040px; }
+    #board-gap { position: absolute; left: 0; right: 0; top: 500px; text-align: center; font-size: 60px; }
+    #board-gap .num { font-size: 150px; color: var(--red); display: block; line-height: 1; }
+    #board-gap-circle { position: absolute; left: 660px; top: 540px; width: 600px; height: 230px; }
+    #board-save { position: absolute; left: 0; right: 0; top: 560px; text-align: center; font-size: 60px; }
+    #board-save .num { font-size: 150px; color: var(--green); display: block; line-height: 1; }
+    #board-save-ul { position: absolute; left: 560px; top: 760px; width: 800px; height: 40px; }
+    .ticks { position: absolute; left: 60px; top: 330px; width: 640px; height: 60px; }
+  </style>
+  <div id="root" data-composition-id="board" data-width="1920" data-height="1080">
+    <div id="board-b1" class="clip" data-start="0" data-duration="{{D_B1}}" data-track-index="0" style="position:absolute;inset:0">
+      <div id="board-stage">
+        <div class="hw" id="board-loan">होम लोन <span class="num">₹50 लाख</span> · <span class="num">30 साल</span><span id="board-360"> = <span class="num">360</span> EMI</span></div>
+        <div class="cust" id="board-A">
+          <svg class="house ink" viewBox="0 0 300 250"><g id="board-hA"><path d="" /><path d="" /><path class="red" d="" /><path class="thin" d="" /></g></svg>
+          <div class="hw name">Customer <span class="num">A</span></div>
+          <svg class="ticks ink" viewBox="0 0 640 60"><g id="board-tA" class="thin"></g></svg>
+          <div class="hw row r2"><span>Interest</span><span class="v" id="board-rA">7%</span></div>
+          <div class="emi hw"><span class="lbl">EMI / महीना</span><span class="v" id="board-eA">₹0</span></div>
+        </div>
+        <div class="cust" id="board-B">
+          <svg class="house ink" viewBox="0 0 300 250"><g id="board-hB"><path class="blue" d="" /><path d="" /><path d="" /><path class="thin" d="" /></g></svg>
+          <div class="hw name">Customer <span class="num">B</span></div>
+          <svg class="ticks ink" viewBox="0 0 640 60"><g id="board-tB" class="thin"></g></svg>
+          <div class="hw row r2"><span>Interest</span><span class="v red-t" id="board-rB">7.5%</span></div>
+          <div class="emi hw"><span class="lbl">EMI / महीना</span><span class="v" id="board-eB">₹0</span></div>
+        </div>
+        <div id="board-mid"><div class="hw" id="board-vs">vs</div></div>
+      </div>
+    </div>
+    <div id="board-b2" class="clip" data-start="{{T_B2}}" data-duration="{{D_B2}}" data-track-index="0" style="position:absolute;inset:0">
+      <div id="board-int">
+        <div class="hw" id="board-int-title" style="left:0;right:0;top:30px;text-align:center;font-size:64px">30 साल का पूरा <span class="red-t">हिसाब</span></div>
+        <div class="tot hw" id="board-totA"><span>A · 7% · कुल interest</span><span class="v" id="board-tvA">₹0</span></div>
+        <div class="tot hw" id="board-totB"><span>B · 7.5% · कुल repayment</span><span class="v" id="board-tvB">₹0</span><span id="board-tvB2" style="display:block;font-size:46px">interest <span class="num red-t" style="font-size:64px">₹75.85 लाख</span></span></div>
+        <svg class="coins ink" id="board-coinsA" viewBox="0 0 420 420"><g id="board-cA"></g></svg>
+        <svg class="coins ink" id="board-coinsB" viewBox="0 0 420 420"><g id="board-cB"></g></svg>
+        <div class="hw" id="board-gap">फ़र्क <span class="num" id="board-gapv">₹6.1 लाख</span><span id="board-gapm" style="font-size:48px">= ₹1,697 हर महीने × 360</span></div>
+        <svg id="board-gap-circle" class="ink" viewBox="0 0 600 230"><path class="red" d="" /></svg>
+        <div class="hw" id="board-save">यही <span class="num">₹6 लाख</span>आप <span class="green-t">बचा</span> सकते हैं</div>
+        <svg id="board-save-ul" class="ink" viewBox="0 0 800 40"><path class="green" d="" /></svg>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const T = {{CUES}};
+      const F = v => "₹" + Math.round(v).toLocaleString("en-IN");
+      const L = v => "₹" + (v / 1e5).toFixed(2) + " लाख";
+      /* houses */
+      function house(g, seed, blueRoof) {
+        const p = g.querySelectorAll("path");
+        p[0].setAttribute("d", hwLine(30, 120, 150, 25, seed) + " " + hwLine(150, 25, 270, 120, seed + 1).replace("M", "L"));
+        p[1].setAttribute("d", hwRect(60, 118, 180, 115, seed + 2));
+        p[2].setAttribute("d", hwRect(128, 160, 44, 73, seed + 3));
+        p[3].setAttribute("d", hwRect(80, 145, 34, 34, seed + 4) + " " + hwRect(186, 145, 34, 34, seed + 5));
+      }
+      house(document.getElementById("board-hA"), 31, false); house(document.getElementById("board-hB"), 41, true);
+      /* 360 tick marks: 30 groups of 12 */
+      function ticks(g, seed) {
+        let d = "";
+        for (let i = 0; i < 30; i++) { const x = 8 + i * 21.5; d += hwLine(x, 8, x, 52, seed + i, 1) + " "; }
+        const p = document.createElementNS("http://www.w3.org/2000/svg", "path"); p.setAttribute("d", d); g.appendChild(p);
+      }
+      ticks(document.getElementById("board-tA"), 51); ticks(document.getElementById("board-tB"), 61);
+      gsap.set(["#board-loan", "#board-A .name", "#board-B .name", "#board-A .row", "#board-B .row", "#board-A .emi", "#board-B .emi", "#board-vs"], { opacity: 0 });
+      /* beat: two customers */
+      tl.fromTo("#board-loan", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.3 }, T.loan);
+      let t = hwDrawAll(tl, "#board-hA", T.custA, 0.35); tl.to("#board-A .name", { opacity: 1, duration: 0.25 }, t - 0.15);
+      t = hwDrawAll(tl, "#board-hB", T.custB, 0.35); tl.to("#board-B .name", { opacity: 1, duration: 0.25 }, t - 0.15);
+      tl.fromTo("#board-vs", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2.2)" }, t);
+      /* rates */
+      tl.to("#board-A .row", { opacity: 1, duration: 0.25 }, T.rateA);
+      tl.to("#board-B .row", { opacity: 1, duration: 0.25 }, T.rateB);
+      hwPop(tl, "#board-rB", T.rateB + 0.05, 0.5);
+      /* 360 EMIs */
+      hwDrawOn(tl, "#board-tA path", T.n360, 1.2, "none"); hwDrawOn(tl, "#board-tB path", T.n360 + 0.1, 1.2, "none");
+      gsap.set("#board-360", { opacity: 0 }); hwPop(tl, "#board-360", T.n360, 0.4);
+      /* EMI counters */
+      tl.to("#board-A .emi", { opacity: 1, duration: 0.25 }, T.emiA); hwCount(tl, "#board-eA", 0, 33264, T.emiA + 0.1, 1.3, F);
+      tl.to("#board-B .emi", { opacity: 1, duration: 0.25 }, T.emiB); hwCount(tl, "#board-eB", 0, 34961, T.emiB + 0.1, 1.3, F);
+      tl.to("#board-eB", { color: "#D94A31", duration: 0.3 }, T.emiB + 1.4);
+      /* camera: push on B's EMI when he re-states it */
+      tl.to("#board-stage", { scale: 1.07, x: -90, y: -50, duration: 0.9, ease: "power2.inOut" }, T.push);
+      tl.to("#board-stage", { scale: 1, x: 0, y: 0, duration: 0.7, ease: "power2.inOut" }, T.pushBack);
+      hwBoil(tl, ["#board-hA", "#board-hB"], { amp: 1.3, rot: 0.3, seed: 7 });
+      /* ---- beat 2: total interest as coin stacks ---- */
+      function coins(g, n, seed) {
+        for (let i = 0; i < n; i++) {
+          const y = 400 - i * 16; const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+          p.setAttribute("d", hwWobbleEllipse(210 + hwHash(i, seed) * 6, y, 120, 12, seed + i, 2.5)); p.setAttribute("class", "thin"); g.appendChild(p);
+        }
+      }
+      coins(document.getElementById("board-cA"), 14, 71); coins(document.getElementById("board-cB"), 16, 81);
+      gsap.set(["#board-int-title", "#board-totA", "#board-totB", "#board-gap", "#board-save"], { opacity: 0 });
+      tl.fromTo("#board-int-title", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.3 }, T.total);
+      tl.to("#board-totA", { opacity: 1, duration: 0.25 }, T.totA); hwCount(tl, "#board-tvA", 0, 6975000, T.totA + 0.1, 1.4, L);
+      hwDrawAll(tl, "#board-cA", T.total + 0.6, 0.75, "none");
+      tl.to("#board-totB", { opacity: 1, duration: 0.25 }, T.totB); hwCount(tl, "#board-tvB", 0, 12590000, T.totB + 0.1, 1.4, v => "₹" + (v/1e7).toFixed(3) + " Cr");
+      gsap.set("#board-tvB2", { opacity: 0 }); tl.to("#board-tvB2", { opacity: 1, duration: 0.3 }, T.gap);
+      hwDrawAll(tl, "#board-cB", T.total + 0.9, 0.75, "none");
+      // gap
+      document.querySelector("#board-gap-circle path").setAttribute("d", hwWobbleEllipse(300, 115, 285, 100, 91, 3));
+      tl.fromTo("#board-gap", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, T.gap);
+      tl.set("#board-gapm", { opacity: 0 }, 0); tl.to("#board-gapm", { opacity: 1, duration: 0.3 }, T.monthly);
+      hwDrawOn(tl, "#board-gap-circle path", T.gap + 0.5, 0.7);
+      // coins + totals leave, savings line arrives
+      tl.to(["#board-coinsA", "#board-coinsB", "#board-totA", "#board-totB", "#board-int-title"], { opacity: 0, duration: 0.3 }, T.save - 0.1);
+      tl.to(["#board-gap", "#board-gap-circle"], { opacity: 0, duration: 0.25 }, T.save - 0.05);
+      document.querySelector("#board-save-ul path").setAttribute("d", hwMarkPath(800, 40, "underline", 93));
+      tl.fromTo("#board-save", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, T.save);
+      hwDrawOn(tl, "#board-save-ul path", T.save + 0.5, 0.6);
+      hwBoil(tl, ["#board-cA", "#board-cB", "#board-gap-circle"], { amp: 1.2, rot: 0.2, seed: 9 });
+      window.__timelines["board"] = tl;
+    })();
+  </script>
+</template>

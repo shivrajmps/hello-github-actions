@@ -1,0 +1,85 @@
+<template>
+  <style>
+    {{SHARED_CSS}}
+    #bank-svg { position: absolute; left: 160px; top: 60px; width: 700px; height: 560px; }
+    #bank-doors { position: absolute; left: 160px; top: 60px; width: 700px; height: 560px; }
+    .door-l { position: absolute; width: 230px; text-align: center; font-size: 50px; top: 508px; }
+    #bank-right { position: absolute; left: 980px; top: 90px; width: 820px; height: 760px; }
+    #bank-title { left: 0; width: 820px; top: 0; font-size: 64px; text-align: left; }
+    .chk { position: absolute; left: 0; width: 820px; font-size: 54px; display: flex; align-items: center; gap: 26px; }
+    .chk svg { width: 64px; height: 64px; flex: none; }
+    .chk .num { font-size: 60px; }
+    #bank-tiny { position: absolute; left: 0; right: 0; top: 660px; text-align: center; font-size: 66px; }
+    #bank-tiny .num { font-size: 120px; color: var(--red); }
+    #bank-tiny-ul { position: absolute; left: 700px; top: 800px; width: 520px; height: 40px; }
+    #bank-mini { position: absolute; left: 160px; top: 650px; width: 700px; height: 200px; }
+    #bank-mini .hw { position: absolute; left: 0; width: 700px; text-align: center; font-size: 50px; }
+  </style>
+  <div id="root" data-composition-id="bank" data-width="1920" data-height="1080">
+    <div id="bank-b1" class="clip" data-start="0" data-duration="{{D_B1}}" data-track-index="0" style="position:absolute;inset:0">
+      <svg id="bank-svg" class="ink" viewBox="0 0 700 560"><g id="bank-g"><path d="" /><path d="" /><path d="" /><path d="" /><path d="" /><path d="" /><path d="" /><path class="thin" d="" /></g>
+        <text x="350" y="118" text-anchor="middle" font-family="Kalam" font-weight="700" font-size="54" fill="#2B2924" id="bank-word" opacity="0">BANK</text></svg>
+      <div id="bank-doors">
+        <div class="hw door-l" id="bank-door1" style="left:60px">Private</div>
+        <div class="hw door-l" id="bank-door2" style="left:410px">Public</div>
+      </div>
+      <div id="bank-mini">
+        <div class="hw" id="bank-mini-t">EMI निकालो · <span class="red-t">फ़र्क</span> जानो</div>
+        <svg class="ink" viewBox="0 0 700 200" style="position:absolute;inset:0"><path id="bank-mini-a" class="red" d="" /></svg>
+      </div>
+      <div id="bank-right">
+        <div class="hw" id="bank-title">loan लेने से पहले पूछो:</div>
+        <div class="chk hw" id="bank-c1" style="top:110px"><svg class="ink" viewBox="0 0 64 64"><path d="" /><path class="green" d="" /></svg><span>छोटी-छोटी amounts → <span class="green-t">principal</span></span></div>
+        <div class="chk hw" id="bank-c2" style="top:210px"><svg class="ink" viewBox="0 0 64 64"><path d="" /><path class="green" d="" /></svg><span>calculation पूरा समझो</span></div>
+        <div class="chk hw" id="bank-c3" style="top:310px"><svg class="ink" viewBox="0 0 64 64"><path d="" /><path class="green" d="" /></svg><span>Floating rate EMI?</span></div>
+        <div class="chk hw" id="bank-c4" style="top:410px"><svg class="ink" viewBox="0 0 64 64"><path d="" /><path class="green" d="" /></svg><span>Tenure बढ़ा / घटा सकते हो?</span></div>
+        <div class="chk hw" id="bank-c5" style="top:510px"><svg class="ink" viewBox="0 0 64 64"><path d="" /><path class="green" d="" /></svg><span>Fixed या Floating?</span></div>
+        <div class="chk hw" id="bank-c6" style="top:610px"><svg class="ink" viewBox="0 0 64 64"><path d="" /><path class="green" d="" /></svg><span>कितनी <span class="num">flexibility</span>? Fine print पढ़ो</span></div>
+      </div>
+    </div>
+    <div id="bank-b2" class="clip" data-start="{{T_B2}}" data-duration="{{D_B2}}" data-track-index="0" style="position:absolute;inset:0">
+      <div class="hw" id="bank-tiny"><span class="num">0.01%</span> भी <span class="red-t">फ़र्क</span> करता है</div>
+      <svg id="bank-tiny-ul" class="ink" viewBox="0 0 520 40"><path class="red" d="" /></svg>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const T = {{CUES}};
+      const g = document.querySelectorAll("#bank-g path");
+      // bank: pediment, base, 4 pillars, two doors, steps
+      g[0].setAttribute("d", hwLine(60, 160, 350, 40, 1) + " " + hwLine(350, 40, 640, 160, 2).replace("M", "L") + " " + hwLine(640, 160, 60, 160, 3).replace("M", "L"));
+      g[1].setAttribute("d", hwRect(90, 170, 520, 290, 4));
+      g[2].setAttribute("d", hwLine(140, 170, 140, 460, 5) + " " + hwLine(560, 170, 560, 460, 6));
+      g[3].setAttribute("d", hwLine(330, 170, 330, 460, 7) + " " + hwLine(370, 170, 370, 460, 8));
+      g[4].setAttribute("d", hwRect(180, 300, 110, 160, 9)); // private door
+      g[5].setAttribute("d", hwRect(410, 300, 110, 160, 10)); // public door
+      g[6].setAttribute("d", hwLine(40, 470, 660, 470, 11) + " " + hwLine(20, 500, 680, 500, 12));
+      g[7].setAttribute("d", hwWobbleEllipse(350, 240, 40, 40, 13, 4));
+      gsap.set(["#bank-door1", "#bank-door2", "#bank-mini-t", "#bank-title", ".chk", "#bank-tiny"], { opacity: 0 });
+      let t = hwDrawAll(tl, "#bank-g", 0.1, 0.32); tl.to("#bank-word", { opacity: 1, duration: 0.25 }, t - 0.2);
+      tl.to("#bank-door1", { opacity: 1, duration: 0.25 }, T.priv); tl.to("#bank-door2", { opacity: 1, duration: 0.25 }, T.priv + 0.7);
+      // EMI compare mini line + arrow between doors
+      document.getElementById("bank-mini-a").setAttribute("d", hwArrowPath(300, 90, "gentle", 14));
+      gsap.set("#bank-mini svg", { x: 200, y: 20 });
+      tl.fromTo("#bank-mini-t", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3 }, T.compare);
+      hwDrawOn(tl, "#bank-mini-a", T.compare + 0.4, 0.6);
+      // checklist: each item: wobbly box draws, then text, then green tick on cue
+      const items = ["c1", "c2", "c3", "c4", "c5", "c6"]; const cues = [T.principal, T.apply, T.floating, T.tenure, T.fixed, T.flex];
+      tl.fromTo("#bank-title", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.3 }, T.compare + 1.0);
+      items.forEach((id, i) => {
+        const ps = document.querySelectorAll("#bank-" + id + " path");
+        ps[0].setAttribute("d", hwRect(8, 8, 48, 48, 20 + i)); ps[1].setAttribute("d", "M 14 34 L 28 48 L 54 14");
+        ps[1].setAttribute("style", "stroke-width:8");
+        tl.to("#bank-" + id, { opacity: 1, duration: 0.25 }, cues[i]);
+        hwDrawOn(tl, ps[0], cues[i], 0.35); hwDrawOn(tl, ps[1], cues[i] + 0.9, 0.3);
+      });
+      hwBoil(tl, ["#bank-g", "#bank-mini svg"], { amp: 1.2, rot: 0.25, seed: 5 });
+      /* beat 2: 0.01% */
+      document.querySelector("#bank-tiny-ul path").setAttribute("d", hwMarkPath(520, 40, "underline", 44));
+      tl.fromTo("#bank-tiny", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.8)" }, T.tiny);
+      hwDrawOn(tl, "#bank-tiny-ul path", T.tiny + 0.6, 0.5);
+      window.__timelines["bank"] = tl;
+    })();
+  </script>
+</template>

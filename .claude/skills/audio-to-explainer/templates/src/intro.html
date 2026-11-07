@@ -1,0 +1,109 @@
+<template>
+  <style>
+    {{SHARED_CSS}}
+    #intro-pct { left: 0; right: 0; top: 150px; text-align: center; font-size: 300px; color: var(--red); font-family: "Baloo 2", sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+    #intro-q { position: absolute; left: 1320px; top: 150px; width: 220px; height: 330px; }
+    #intro-line { left: 0; right: 0; top: 520px; text-align: center; font-size: 84px; }
+    #intro-loans { position: absolute; left: 0; top: 150px; width: 1920px; height: 620px; }
+    .loan { position: absolute; width: 420px; text-align: center; }
+    .loan svg { width: 260px; height: 230px; display: block; margin: 0 auto; }
+    .loan .hw { position: static; display: block; font-size: 58px; margin-top: 6px; }
+    #intro-promise { position: absolute; left: 0; top: 130px; width: 1920px; height: 720px; }
+    #intro-book { position: absolute; left: 560px; top: 40px; width: 800px; height: 560px; }
+    #intro-promise-t { left: 0; right: 0; top: 610px; text-align: center; font-size: 72px; }
+    #intro-promise-t .num { font-size: 86px; }
+  </style>
+  <div id="root" data-composition-id="intro" data-width="1920" data-height="1080">
+    <!-- beat 1: the 0.5% -->
+    <div id="intro-b1" class="clip" data-start="0" data-duration="{{D_B1}}" data-track-index="0" style="position:absolute;inset:0">
+      <div class="wrap" id="intro-pct-w" style="left:0;right:0;top:0;height:520px">
+        <div class="hw" id="intro-pct">0.5<span style="font-size:0.72em">%</span></div>
+        <svg id="intro-q" class="ink" viewBox="0 0 220 330"><path id="intro-q-p" class="red" d="" /><path id="intro-q-dot" class="red" d="" /></svg>
+      </div>
+      <div class="hw" id="intro-line">सिर्फ़ <span class="wrap" style="position:relative;display:inline-block;isolation:isolate"><span class="hl" id="intro-hl" style="left:-6px;right:-6px;bottom:4px"></span>आधा परसेंट</span> ज़्यादा… फ़र्क पड़ता है?</div>
+    </div>
+    <!-- beat 2: every loan -->
+    <div id="intro-b2" class="clip" data-start="{{T_B2}}" data-duration="{{D_B2}}" data-track-index="0" style="position:absolute;inset:0">
+      <div id="intro-loans">
+        <div class="loan" id="intro-l1" style="left:210px;top:40px">
+          <svg class="ink" viewBox="0 0 260 230"><g id="intro-l1-g"><path d="" /><path d="" /><path class="red" d="" /></g></svg>
+          <span class="hw">होम लोन</span>
+        </div>
+        <div class="loan" id="intro-l2" style="left:750px;top:40px">
+          <svg class="ink" viewBox="0 0 260 230"><g id="intro-l2-g"><path d="" /><path d="" /><path d="" /></g></svg>
+          <span class="hw">पर्सनल लोन</span>
+        </div>
+        <div class="loan" id="intro-l3" style="left:1290px;top:40px">
+          <svg class="ink" viewBox="0 0 260 230"><g id="intro-l3-g"><path d="" /><path d="" /><path d="" /></g></svg>
+          <span class="hw">कोई भी लोन</span>
+        </div>
+      </div>
+      <div class="hw" id="intro-b2-t" style="left:0;right:0;top:600px;text-align:center;font-size:72px">हर लोन पर यही <span class="wrap" style="position:relative;display:inline-block;isolation:isolate"><span class="hl" id="intro-hl2" style="left:-6px;right:-6px;bottom:4px"></span>गणित</span> लागू होता है</div>
+    </div>
+    <!-- beat 3: the promise -->
+    <div id="intro-b3" class="clip" data-start="{{T_B3}}" data-duration="{{D_B3}}" data-track-index="0" style="position:absolute;inset:0">
+      <div id="intro-promise">
+        <svg id="intro-book" class="ink" viewBox="0 0 800 560">
+          <g id="intro-book-g">
+            <path d="" /><path d="" /><path d="" /><path class="thin" d="" /><path class="thin" d="" /><path class="thin" d="" /><path class="thin" d="" />
+          </g>
+          <text id="intro-book-t1" x="400" y="235" text-anchor="middle" font-family="Kalam" font-weight="700" font-size="72" fill="#2B2924" opacity="0">₹50 लाख</text>
+          <text id="intro-book-t2" x="400" y="330" text-anchor="middle" font-family="Kalam" font-weight="700" font-size="64" fill="#D94A31" opacity="0">7% vs 7.5%</text>
+          <text id="intro-book-t3" x="400" y="425" text-anchor="middle" font-family="Kalam" font-weight="700" font-size="64" fill="#2B2924" opacity="0">30 साल</text>
+        </svg>
+        <div class="hw" id="intro-promise-t">कैलकुलेशन से समझते हैं, <span class="num">5 मिनट</span> में</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const T = {{CUES}};
+      /* ---- beat 1 ---- */
+      // question mark: hook stroke + dot
+      document.getElementById("intro-q-p").setAttribute("d", "M 40 95 C 40 20, 190 20, 185 100 C 182 160, 110 160, 108 230");
+      document.getElementById("intro-q-dot").setAttribute("d", hwWobbleEllipse(110, 290, 14, 14, 3, 6));
+      gsap.set("#intro-line", { opacity: 0 }); gsap.set("#intro-hl", { scaleX: 0 });
+      gsap.set("#intro-pct", { opacity: 1 }); hwWrite(tl, "#intro-pct", 0.0, 0.55);
+      hwDrawOn(tl, "#intro-q-p", 0.75, 0.55); hwDrawOn(tl, "#intro-q-dot", 1.3, 0.2);
+      hwBoil(tl, ["#intro-q"], { amp: 1.6, rot: 0.6, seed: 2 });
+      tl.fromTo("#intro-line", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, T.line);
+      tl.to("#intro-hl", { scaleX: 1, duration: 0.35, ease: "power2.out" }, T.aadha);
+      /* ---- beat 2: three loans, drawn as the voice names them ---- */
+      // house
+      const l1 = document.querySelectorAll("#intro-l1-g path");
+      l1[0].setAttribute("d", hwLine(30, 120, 130, 30, 1) + " " + hwLine(130, 30, 230, 120, 2).replace("M", "L"));
+      l1[1].setAttribute("d", hwRect(55, 118, 150, 100, 3));
+      l1[2].setAttribute("d", hwRect(112, 150, 38, 68, 4));
+      // wallet/cash for personal loan
+      const l2 = document.querySelectorAll("#intro-l2-g path");
+      l2[0].setAttribute("d", hwRect(30, 70, 200, 120, 5));
+      l2[1].setAttribute("d", hwWobbleEllipse(130, 130, 34, 34, 6, 4));
+      l2[2].setAttribute("d", "M 118 115 q 22 -6 24 10 q -2 12 -20 10 q 20 4 20 14 q -2 12 -24 8");
+      // generic: a rupee note + a hand-drawn tag
+      const l3 = document.querySelectorAll("#intro-l3-g path");
+      l3[0].setAttribute("d", hwRect(40, 60, 180, 110, 7));
+      l3[1].setAttribute("d", hwLine(40, 200, 220, 200, 8, 3) + " " + hwLine(60, 220, 200, 220, 9, 3));
+      l3[2].setAttribute("d", "M 100 90 h 60 M 100 112 h 60 M 130 90 v 0 c 0 30 -10 40 -30 40 l 42 40");
+      gsap.set(["#intro-l1 .hw", "#intro-l2 .hw", "#intro-l3 .hw", "#intro-b2-t"], { opacity: 0 }); gsap.set("#intro-hl2", { scaleX: 0 });
+      let t = hwDrawAll(tl, "#intro-l1-g", T.home, 0.42); tl.to("#intro-l1 .hw", { opacity: 1, duration: 0.25 }, t - 0.1);
+      t = hwDrawAll(tl, "#intro-l2-g", T.personal, 0.42); tl.to("#intro-l2 .hw", { opacity: 1, duration: 0.25 }, t - 0.1);
+      t = hwDrawAll(tl, "#intro-l3-g", T.any, 0.42); tl.to("#intro-l3 .hw", { opacity: 1, duration: 0.25 }, t - 0.1);
+      tl.fromTo("#intro-b2-t", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, T.every);
+      tl.to("#intro-hl2", { scaleX: 1, duration: 0.3, ease: "power2.out" }, T.every + 0.4);
+      hwBoil(tl, ["#intro-l1-g", "#intro-l2-g", "#intro-l3-g"], { amp: 1.3, rot: 0.3, seed: 11 });
+      /* ---- beat 3: the notebook ---- */
+      const bk = document.querySelectorAll("#intro-book-g path");
+      bk[0].setAttribute("d", hwRect(110, 60, 580, 440, 12));
+      bk[1].setAttribute("d", hwLine(110, 120, 690, 120, 13, 2));
+      bk[2].setAttribute("d", hwLine(170, 40, 170, 60, 14, 1) + " " + hwLine(300, 40, 300, 60, 15, 1) + " " + hwLine(430, 40, 430, 60, 16, 1) + " " + hwLine(560, 40, 560, 60, 17, 1));
+      bk[3].setAttribute("d", hwLine(150, 260, 650, 260, 18, 1.5)); bk[4].setAttribute("d", hwLine(150, 355, 650, 355, 19, 1.5)); bk[5].setAttribute("d", hwLine(150, 450, 650, 450, 20, 1.5)); bk[6].setAttribute("d", hwLine(150, 165, 650, 165, 21, 1.5));
+      gsap.set("#intro-promise-t", { opacity: 0 });
+      t = hwDrawAll(tl, "#intro-book-g", T.calc, 0.3);
+      tl.to("#intro-book-t1", { opacity: 1, duration: 0.2 }, T.calc + 1.0); tl.to("#intro-book-t2", { opacity: 1, duration: 0.2 }, T.calc + 1.5); tl.to("#intro-book-t3", { opacity: 1, duration: 0.2 }, T.calc + 2.0);
+      tl.fromTo("#intro-promise-t", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, T.promise);
+      hwBoil(tl, ["#intro-book-g"], { amp: 1.2, rot: 0.25, seed: 21 });
+      window.__timelines["intro"] = tl;
+    })();
+  </script>
+</template>

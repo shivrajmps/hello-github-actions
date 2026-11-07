@@ -1,0 +1,17 @@
+@font-face { font-family: "Kalam"; src: url("assets/fonts/kalam-devanagari-700-normal.woff2") format("woff2"); font-weight: 700; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: "Kalam"; src: url("assets/fonts/kalam-latin-700-normal.woff2") format("woff2"); font-weight: 700; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Kalam"; src: url("assets/fonts/kalam-devanagari-400-normal.woff2") format("woff2"); font-weight: 400; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: "Kalam"; src: url("assets/fonts/kalam-latin-400-normal.woff2") format("woff2"); font-weight: 400; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Baloo 2"; src: url("assets/fonts/baloo-2-devanagari-700-normal.woff2") format("woff2"); font-weight: 700; unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: "Baloo 2"; src: url("assets/fonts/baloo-2-latin-700-normal.woff2") format("woff2"); font-weight: 700; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+#root { position: absolute; inset: 0; overflow: hidden; --ink: #2B2924; --paper: #F7F4EC; --yellow: #FFD84A; --red: #D94A31; --green: #2E8B4A; --blue: #3D6FB4; font-family: "Kalam", cursive; color: var(--ink); }
+.ink path, .ink line, .ink circle, .ink rect, .ink ellipse, .ink polyline { fill: none; stroke: var(--ink); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+.ink .thin { stroke-width: 4.5; }
+.ink .red { stroke: var(--red); } .ink .green { stroke: var(--green); } .ink .blue { stroke: var(--blue); } .ink .yellow { stroke: var(--yellow); }
+.ink .fill-yellow { fill: var(--yellow); stroke: none; } .ink .fill-red { fill: var(--red); stroke: none; } .ink .fill-paper { fill: var(--paper); }
+.hw { position: absolute; font-family: "Kalam", cursive; font-weight: 700; color: var(--ink); white-space: nowrap; line-height: 1.1; }
+.num { font-family: "Baloo 2", sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+.red-t { color: var(--red); } .green-t { color: var(--green); } .blue-t { color: var(--blue); }
+.wrap { position: absolute; isolation: isolate; }
+.hl { position: absolute; height: 0.42em; background: var(--yellow); border-radius: 4px 9px 5px 10px; transform-origin: 0 50%; z-index: -1; }
+.note { position: absolute; background: var(--yellow); border: 4px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); padding: 10px 26px; font-family: "Kalam", cursive; font-weight: 700; color: var(--ink); white-space: nowrap; }
